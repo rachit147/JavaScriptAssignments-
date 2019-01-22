@@ -10,7 +10,5 @@ function basicOp(operation, value1, value2) {
         finalValue = value1 / value2;
     } else {
         return 'only +,-,*,/ operators are allowed';
-    }
-
-    return finalValue;
+    } return finalValue;
 }
