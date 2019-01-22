@@ -1,2 +1,3 @@
-function printArray(array){   return array.toString();
+function printArray(array){
+return array.join();
 }
