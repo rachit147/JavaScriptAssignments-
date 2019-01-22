@@ -1,29 +1,13 @@
 function partitionOn(pred, items) {
-  var leftArray= [];
-  var rightArray = [];
-  
-  for(var arrayIndex = 0; arrayIndex < items.length; arrayIndex++) {
-    var item = items[arrayIndex];
-    
-    if(pred(item)) 
-    {
-      rightArray.push(item);
-    
-    } else 
-    {
-        leftArray.push(item);
-     }
-  }
-  
-  items.length = 0;
-  
-  for(var arrayIndex = 0; arrayIndex < leftArray.length; arrayIndex++) {
-    items.push(leftArray[arrayIndex]);
-  }
-  
-  for(var arrayIndex = 0; arrayIndex < rightArray.length; arrayIndex++) {
-    items.push(rightArray[arrayIndex]);
-  }
-  
-  return leftArray.length;
+    var arrayLength = items.length;
+    var length = 0,
+        temporary;
+    for (var index = 0; index < arrayLength; index++) {
+        if (!pred(items[index])) {
+            temporary = items.splice(index, 1);
+            items.splice(length, 0, temporary[0]);
+            length++;
+        }
+    }
+    return length;
 }
