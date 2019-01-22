@@ -1,23 +1,12 @@
-function rentalCarCost(d) 
-{
-var totalDays=d;
-var perDayRent = 40;
-var totalRent=0;
-var finalAmount=0;
+function rentalCarCost(d) {
+    var finalAmount = 0;
+    if (d < 3) {
+        finalAmount = d * 40;
+    } else if (d >= 3 && d < 7) {
 
-if(totalDays<3)
-{
-finalAmount=totalDays*perDayRent; 
-}
-else if(totalDays >=3 && totalDays <7)
-{
-totalRent=totalDays*perDayRent; 
-finalAmount = totalRent-20;
-}
-else 
-{
-totalRent=totalDays*perDayRent; 
-finalAmount = totalRent-50;
-}
-return finalAmount;
+        finalAmount = d * 40 - 20;
+    } else {
+        finalAmount = d * 40 - 50;
+    }
+    return finalAmount;
 }
