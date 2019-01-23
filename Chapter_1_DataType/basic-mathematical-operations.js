@@ -9,6 +9,6 @@ function basicOp(operation, value1, value2) {
     } else if (operation === '/') {
         finalValue = value1 / value2;
     } else {
-        return 'only +,-,*,/ operators are allowed';
+        finalValue = 'only +,-,*,/ operators are allowed';
     } return finalValue;
 }
