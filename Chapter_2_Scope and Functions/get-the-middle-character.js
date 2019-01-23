@@ -1,14 +1,11 @@
-function getMiddle(s)
-{
-var lengthOfString= s.length;
-
-var middleIndex= Math.round(lengthOfString/2);
-
-if(lengthOfString%2==0)
-{
-return s[middleIndex-1]+s[middleIndex];
+function getMiddle(s) {
+    var lengthOfString = s.length;
+    var middleIndex = Math.round(lengthOfString / 2);
+    var middleCharacters = [];
+    if (lengthOfString % 2 == 0) {
+        middleCharacters = s.charAt(middleIndex - 1) + s.charAt(middleIndex);
+    } else {
+        middleCharacters = s.charAt(middleIndex - 1);
+    }
+    return middleCharacters;
 }
-else
-return s[middleIndex-1];
-}
-

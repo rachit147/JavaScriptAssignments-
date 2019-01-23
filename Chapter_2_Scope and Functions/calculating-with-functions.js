@@ -1,104 +1,73 @@
-function zero(operator)
-{
-    if(typeof(operator)=='undefined')
-    {  
-      return 0;
-    }
-    
-    return Math.trunc(eval(0+operator));
-}
-function one(operator)
-{
-
-    if(typeof(operator)=='undefined')
-    {  
-      return 1;
-    }
-    
-    return Math.trunc(eval(1+operator));
-}
-function two(operator) 
-{
-
-    if(typeof(operator)=='undefined')
-    {  
-      return 2;
-    }
-    
-    return Math.trunc(eval(2+operator));
-}
-function three(operator) 
-{
-
-    if(typeof(operator)=='undefined')
-    {  
-      return 3;
-    }
-    
-    return Math.trunc(eval(3+operator));
-}
-function four(operator) 
-{
-
-    if(typeof(operator)=='undefined')
-    {  
-      return 4;
-    }
-    
-    return Math.trunc(eval(4+operator));
-}
-function five(operator) 
-{
-
-    if(typeof(operator)=='undefined')
-    {  
-      return 5;
-    }
-    
-    return Math.trunc(eval(5+operator));
-}
-function six(operator) 
-{
-
-    if(typeof(operator)=='undefined')
-    {  
-      return 6;
-    }
-    
-    return Math.trunc(eval(6+operator));
-}
-function seven(operator) 
-{
-
-    if(typeof(operator)=='undefined')
-    {  
-      return 7;
-    }
-    
-    return Math.trunc(eval(7+operator));
-}
-function eight(operator)
-{
-
-    if(typeof(operator)=='undefined')
-    {  
-      return 8;
-    }
-    
-    return Math.trunc(eval(8+operator));
-}
-function nine(operator) 
-{
-
-    if(typeof(operator)=='undefined')
-    {  
-      return 9;
-    }
-    
-    return Math.trunc(eval(9+operator));
+function zero(func) {
+    return getResult(func, 0);
 }
 
-function plus(operator) {return "+"+operator;}
-function minus(operator) {return "-"+operator;}
-function times(operator) {return "*"+operator;}
-function dividedBy(operator) {return "/"+operator;}
+function one(func) {
+    return getResult(func, 1);
+}
+
+function two(func) {
+    return getResult(func, 2);
+}
+
+function three(func) {
+    return getResult(func, 3);
+}
+
+function four(func) {
+    return getResult(func, 4);
+}
+
+function five(func) {
+    return getResult(func, 5);
+}
+
+function six(func) {
+    return getResult(func, 6);
+}
+
+function seven(func) {
+    return getResult(func, 7);
+}
+
+function eight(func) {
+    return getResult(func, 8);
+}
+
+function nine(func) {
+    return getResult(func, 9);
+}
+
+function getResult(func, num) {
+    let result;
+    if (func) {
+        result = func(num);
+    } else {
+        result = num;
+    }
+    return result;
+}
+
+function plus(num2) {
+    return function(num1) {
+        return num1 + num2;
+    }
+}
+
+function minus(num2) {
+    return function(num1) {
+        return num1 - num2;
+    }
+}
+
+function times(num2) {
+    return function(num1) {
+        return num1 * num2;
+    }
+}
+
+function dividedBy(num2) {
+    return function(num1) {
+       return Math.floor(num1 / num2);
+    }
+}

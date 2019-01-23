@@ -1,23 +1,15 @@
-function basicOp(operation, value1, value2)
-{
-
-if(operation == '+')
-{
-return value1+value2;
-
-
-}
-else if(operation == '-')
-{
-return value1-value2;
-}
-else if(operation == '*')
-{
-return value1*value2;
-}
-else
-{
-return value1/value2;
-}
-
+function basicOp(operation, value1, value2) {
+    var finalValue = 0;
+    if (operation === '+') {
+        finalValue = value1 + value2;
+    } else if (operation === '-') {
+        finalValue = value1 - value2;
+    } else if (operation === '*') {
+        finalValue = value1 * value2;
+    } else if (operation === '/') {
+        finalValue = value1 / value2;
+    } else {
+        finalValue = 'only +,-,*,/ operators are allowed';
+    } 
+    return finalValue;
 }
