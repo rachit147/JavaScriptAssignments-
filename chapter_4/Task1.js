@@ -1,5 +1,5 @@
 var Cat = (function() {
-    var count,total = 0;
+    var count = 0,total = 0;
     function Cat(name, weight) {
         if (weight) {
             total = total + weight;
@@ -9,6 +9,7 @@ var Cat = (function() {
                 set: function(value) {
                     total = total + value - weight;
                     weight = value;
+
                 },
                 get: function() {
                     return weight;
@@ -19,7 +20,7 @@ var Cat = (function() {
         }
     }
     Cat.averageWeight = function() {
-        average = total / count;
+        average = total / count
         return average;
     }
     return Cat;
