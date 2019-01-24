@@ -9,7 +9,6 @@ var Cat = (function() {
                 set: function(value) {
                     total = total + value - weight;
                     weight = value;
-
                 },
                 get: function() {
                     return weight;
