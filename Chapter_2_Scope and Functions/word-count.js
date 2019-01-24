@@ -1,8 +1,10 @@
 function countWords(str) {
+    var result;
     str = str.trim();
     if (str) {
-        return str.split(/\s+/).length;
+        result = str.split(/\s+/).length;
     } else {
-        return 0;
+        result = 0;
     }
+    return result;
 }
