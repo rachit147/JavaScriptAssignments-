@@ -1,12 +1,10 @@
 function prefill(n, v) {
-    var result;
-    if (!isFinite(n) || n % 1 !== 0 || n < 0 || typeof(n) === 'boolean' || isNaN(n)) {
-        throw new TypeError(n + ' is invalid');
-    } else if (n == 0) {
-        result = [];
-    } else {
-        var prefillArray = new Array(n);
+    var result = [];
+    if (n >= 0 && n % 1 === 0 && (typeof(n) === 'number' || typeof(n) === 'string')) {
+        var prefillArray = new Array(Number(n));
         result = prefillArray.fill(v);
+    } else {
+        throw new TypeError(n + ' is invalid');
     }
     return result;
 }
