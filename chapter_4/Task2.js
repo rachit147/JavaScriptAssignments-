@@ -1,5 +1,5 @@
 function add(arg) {
-    let result = function(y) {
+    let result = function(arg1) {
         return add(arg + arg1);
     };
     result.valueOf = function() {
