@@ -3,9 +3,7 @@ Object.prototype.hash = function(string) {
         result = this;
     for (var i = 0; i < str.length; i++) {
         if (result) {
-            console.log(result);
-            result = result[str[i]];
-            console.log(result);
+            result = result[str[i]];    
         } else {
             break;
         }
